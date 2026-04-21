@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLLz - DETAILS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="details-header">
+        <h1>POLLz</h1>
+    </header>
+    <main class="details-main">
+        <div class="details-card">
+            <div class="details-header-row">
+                <h2 class="details-title">Poll Details</h2>
+                <a href="index.html" class="back-to-feed-btn">&#8592; Back to Feed</a>
+            </div>
+            <div id="tabs-container" class="tabs-container"></div>
+            <div id="charts-container" class="charts-container"></div>
+            <div id="loading-message" class="details-loading-message"></div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBAXHgJ_zzxJvf9d7iR3ekCw5lry4qSW7I",
+        authDomain: "pollz-acaaf.firebaseapp.com",
+        projectId: "pollz-acaaf",
+        storageBucket: "pollz-acaaf.firebasestorage.app",
+        messagingSenderId: "906842134158",
+        appId: "1:906842134158:web:5fbe3df515671110b89bdf",
+        measurementId: "G-X1LVYRZ9E3"
+      };
+      if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="details.js"></script>
+</body>
+</html> 
