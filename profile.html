@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Profile - POLLz</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Firebase SDKs -->
+   
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
-<p></p>
 <body>
     <header>
         <h1>POLLz</h1>
     </header>
     <main style="display:flex;justify-content:center;align-items:center;min-height:60vh;">
         <div class="modal-content" style="min-width:320px;max-width:90vw;">
-            <!-- Login Form -->
+            
             <div id="loginSection">
                 <h2>Login</h2>
                 <form id="loginForm">
@@ -43,7 +42,7 @@
                 <p id="signupError" style="color:red;"></p>
                 <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
             </div>
-            <!-- Profile Form (hidden until needed) -->
+       
             <div id="profileSection" style="display:none;">
                 <h2>Create Your Profile</h2>
                 <form id="profileForm">
@@ -64,8 +63,9 @@
         </div>
     </main>
     <script>
-    // 1. Add your Firebase config here
-    const firebaseConfig = {
+   
+    const firebaseConfig = 
+    {
     apiKey: "AIzaSyBAXHgJ_zzxJvf9d7iR3ekCw5lry4qSW7I",
     authDomain: "pollz-acaaf.firebaseapp.com",
     projectId: "pollz-acaaf",
@@ -88,17 +88,20 @@
     const loginError = document.getElementById('loginError');
     const signupError = document.getElementById('signupError');
     const profileError = document.getElementById('profileError');
-    document.getElementById('showSignup').onclick = function() {
+    document.getElementById('showSignup').onclick = function() 
+    {
         loginSection.style.display = 'none';
         signupSection.style.display = 'block';
     };
-    document.getElementById('showLogin').onclick = function() {
+    document.getElementById('showLogin').onclick = function()
+    {
         signupSection.style.display = 'none';
         loginSection.style.display = 'block';
     };
 
     // 2. Auth state listener
-    auth.onAuthStateChanged(function(user) {
+    auth.onAuthStateChanged(function(user) 
+                            {
         if (user) {
             // Check if profile exists in Firestore
             db.collection('profiles').doc(user.uid).get().then(function(doc) {
